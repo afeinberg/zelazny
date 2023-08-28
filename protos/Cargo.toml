@@ -1,0 +1,16 @@
+[package]
+name = "protos"
+version.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[lib]
+
+[dependencies]
+prost = { workspace = true }
+tonic = { workspace = true }
+
+[build-dependencies]
+prost-build = { workspace = true }
+tonic-build = { workspace = true }

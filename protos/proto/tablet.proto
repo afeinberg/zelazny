@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package zelazny.tablet;
+
+import "zelazny.proto";
+
+service Tablet {
+	rpc StatusCheck(zelazny.StatusCheckRequest) returns (zelazny.StatusCheckResponse);  	
+}

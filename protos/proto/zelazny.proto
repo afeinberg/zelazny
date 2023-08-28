@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package zelazny;
+
+message StatusCheckRequest {
+	string id = 1;
+}
+
+message StatusCheckResponse {
+	string id = 1;
+}

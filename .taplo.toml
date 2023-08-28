@@ -1,0 +1,20 @@
+# TOML formatting configuration file
+# https://taplo.tamasfe.dev/configuration/file.html
+
+# Only Cargo.toml files.
+include = ["**/Cargo.toml"]
+
+[formatting]
+column_width = 200
+
+# Avoid creating new lines for crate feature arrays
+array_auto_collapse = false
+
+# Reorder crate dependencies alphabetically using a custom rule.
+# https://taplo.tamasfe.dev/configuration/file.html#rules
+[[rule]]
+include = ["**/Cargo.toml"]
+keys = ["dependencies", "workspace.dependencies", "dev-dependencies", "build-dependencies"]
+
+[rule.formatting]
+reorder_keys = true

@@ -1,0 +1,19 @@
+[package]
+name = "tablet"
+version.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+edition.workspace = true
+default-run = "tablet"
+
+[[bin]]
+name = "tablet-cli"
+path = "src/cli.rs"
+
+[dependencies]
+anyhow = { workspace = true }
+protos = { workspace = true }
+tokio = { workspace = true, features = ["signal"] }
+tonic = { workspace = true }
+tracing = { workspace = true }
+futures = { workspace = true }
