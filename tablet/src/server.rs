@@ -2,9 +2,9 @@ use tonic::{transport::Server, Request, Response, Status};
 
 use protos::tablet::tablet_server::{Tablet, TabletServer};
 
-use protos::{StatusCheckRequest, StatusCheckResponse};
 use anyhow::Result;
 use futures::FutureExt;
+use protos::{StatusCheckRequest, StatusCheckResponse};
 use tokio::sync::broadcast::Sender;
 
 use crate::Config;
@@ -20,7 +20,7 @@ impl Tablet for TabletRpcServer {
     ) -> Result<Response<StatusCheckResponse>, Status> {
         let request = request.into_inner();
         let reply = StatusCheckResponse {
-            id: format!("{}", request.id),
+            id: format!("tablet_server->{}", request.id),
         };
         Ok(Response::new(reply))
     }

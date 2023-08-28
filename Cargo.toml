@@ -13,6 +13,7 @@ authors = ["Alex Feinberg <alex@strlen.net>"]
 
 [workspace.dependencies]
 anyhow = { version = "1", features = ["backtrace"] }
+futures = "0.3"
 prost = "0.11.9"
 prost-build = "0.11.9"
 protos = { path = "protos" }
@@ -21,5 +22,3 @@ tokio = { version = "1.8", features = ["macros", "rt-multi-thread"] }
 tonic = "0.9.2"
 tonic-build = "0.9.2"
 tracing = "0.1"
-futures = "0.3"
-

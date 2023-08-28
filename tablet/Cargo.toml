@@ -12,8 +12,8 @@ path = "src/cli.rs"
 
 [dependencies]
 anyhow = { workspace = true }
+futures = { workspace = true }
 protos = { workspace = true }
 tokio = { workspace = true, features = ["signal"] }
 tonic = { workspace = true }
 tracing = { workspace = true }
-futures = { workspace = true }

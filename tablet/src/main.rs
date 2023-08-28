@@ -5,7 +5,6 @@ use tracing::info;
 
 #[tokio::main]
 async fn main() -> Result<()> {
-
     let mut sigterm_hook =
         tokio::signal::unix::signal(tokio::signal::unix::SignalKind::terminate())
             .context("failed to install SIGTERM handler")?;
